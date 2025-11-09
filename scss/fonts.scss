@@ -1,0 +1,62 @@
+.orbitron {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.spartan {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.rajdhani {
+    font-family: "Rajdhani", sans-serif;
+    font-style: normal;
+
+    &-400 {
+        font-weight: 400;
+    }
+
+    &-500 {
+        font-weight: 500;
+    }
+
+    &-600 {
+        font-weight: 600;
+    }
+
+    &-700 {
+        font-weight: 700;
+    }
+
+}
+
+.museomoderno {
+    font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.aldrich-regular {
+    font-family: "Aldrich", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

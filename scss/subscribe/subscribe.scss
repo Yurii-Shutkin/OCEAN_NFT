@@ -1,0 +1,152 @@
+@use 'sass:map';
+@use '../vars' as *;
+@use '../mixins' as *;
+
+.subscribe {
+    display: flex;
+    margin-bottom: 14.4rem;
+
+    @media(max-width: map.get($width, tablet)) {
+        flex-direction: column-reverse;
+    }
+
+    @media(max-width: map.get($width, mobile)) {
+        margin-bottom: 19.2rem;
+    }
+
+
+    &__banner {
+        display: block;
+        width: 97rem;
+        height: 26rem;
+        border-radius: .5rem;
+        margin-right: 7rem;
+
+        @media(max-width: map.get($width, tablet)) {
+            width: 100%;
+        }
+
+        @media(max-width: map.get($width, mobile)) {
+            height: 68rem;
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        width: 67%;
+        margin-left: auto;
+
+        @media(max-width: map.get($width, tablet)) {
+            margin-left: 0;
+            margin-bottom: 8rem;
+        }
+
+        @media(max-width: map.get($width, mobile)) {
+            width: 100%;
+            margin-bottom: 19.5rem;
+        }
+
+    }
+
+    &__title {
+        color: map.get($colors, primary);
+        font-size: 3.6rem;
+        margin-top: 2.6rem;
+        margin-bottom: 2.6rem;
+
+        @media(max-width: map.get($width, mobile)) {
+            font-size: 4.6rem;
+            margin-left: -1rem;
+            letter-spacing: .06rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__decs {
+        display: block;
+        color: map.get($colors, primary);
+        font-size: 1.8rem;
+        line-height: 1.8;
+        letter-spacing: .022rem;
+        margin-right: 2rem;
+        margin-bottom: 4.4rem;
+
+        @media(max-width: map.get($width, mobile)) {
+            font-size: 2.6rem;
+            margin-left: -1rem;
+            letter-spacing: -.16rem;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__form {
+        &--input {
+            background: map.get($colors, primary);
+            padding: 1.6rem 0 1.6rem 1.6rem;
+            font-size: 1.3rem;
+            width: 24.4rem;
+            border-radius: .3rem;
+            margin-right: .6rem;
+            border-radius: 1rem 0 0 1rem;
+
+            @media(max-width: map.get($width, mobile)) {
+                padding: 2rem 0 2rem 1.6rem;
+                margin-left: -1rem;
+                width: 32.4rem;
+                font-size: 1.8rem;
+            }
+
+
+            &::placeholder {
+                color: #474a57;
+                opacity: 1;
+                font-size: 1.8rem;
+                letter-spacing: .048rem;
+            }
+        }
+
+        &--btn {
+            padding: 1.6rem 3.3rem;
+            border-radius: 0 1rem 1rem 0;
+            position: relative;
+            z-index: 1;
+            color: map.get($colors, primary);
+            background: map.get($colors, gradient);
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+
+            @media(max-width: map.get($width, mobile)) {
+                padding: 2rem 4.5rem;
+                font-size: 1.8rem;
+            }
+
+            &:hover {
+                animation: hueRotate 3s linear infinite;
+            }
+
+            @keyframes hueRotate {
+                0% {
+                    filter: hue-rotate(0deg);
+                }
+
+                100% {
+                    filter: hue-rotate(360deg);
+                }
+            }
+
+            &:active {
+                transform: scale(0.96);
+                filter: brightness(0.85);
+            }
+
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                padding: .2rem;
+                @include round-gradient-border(map.get($colors, reverce-gradient))
+            }
+        }
+    }
+}

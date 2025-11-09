@@ -1,0 +1,239 @@
+@use 'sass:map';
+@use '../vars' as *;
+
+.collections {
+    margin-bottom: 14.2rem;
+
+    @media (max-width: map.get($width, tablet-portrait)) {
+        margin-bottom: 19rem;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__allbtn {
+        color: map.get($colors, primary);
+        font-size: 2.4rem;
+
+        img {
+            width: 22%;
+            margin-left: 1.8rem;
+        }
+
+        @media (max-width: map.get($width, tablet-portrait)) {
+            display: none;
+        }
+    }
+
+    &__title {
+        color: map.get($colors, primary);
+        font-size: 2.4rem;
+        margin-bottom: 4.2rem;
+
+        @media (max-width: map.get($width, tablet-portrait)) {
+            font-size: 3.1rem;
+            margin-left: -1.3rem;
+            letter-spacing: .08rem;
+            margin-bottom: 5.3rem;
+        }
+
+        @media(max-width: map.get($width, mobile)) {
+            margin-bottom: 5.4rem;
+        }
+    }
+
+    // &__wrap {
+    //     display: flex;
+    //     gap: 3rem;
+
+    //     @media (max-width: map.get($width, pc)) {
+    //         justify-content: space-around;
+    //         gap: 3rem;
+    //     }
+
+    //     @media (max-width: map.get($width, lap-top)) {
+    //         justify-content: space-between;
+    //         gap: 3rem;
+    //     }
+
+    //     @media (max-width: map.get($width, tablet)) {
+    //         flex-wrap: wrap;
+    //         justify-content: space-around;
+    //         gap: 3rem;
+    //     }
+
+    //     @media (max-width: map.get($width, tablet-portrait)) {
+    //         flex-wrap: nowrap;
+    //         // overflow: hidden;
+    //         margin-left: -1.2rem;
+    //         margin-bottom: 7rem;
+    //     }
+    // }
+
+    &__item {
+        border: 2px solid;
+        border-image: map.get($colors, grey-gradient) 1;
+    }
+
+    &__bg {
+        height: 19rem;
+        background-image: url('../../src/img/backgrounds/cards_bg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media (max-width: map.get($width, tablet-portrait)) {
+            height: 25.5rem;
+        }
+    }
+
+    &__user-info {
+        position: relative;
+        height: 31.5rem;
+        backdrop-filter: blur(8rem);
+
+        @media (max-width: map.get($width, tablet-portrait)) {
+            height: 43.5rem;
+        }
+
+        &--img {
+            width: 14.5rem;
+            height: 14.5rem;
+            border: .35rem solid map.get($colors, primary);
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: .95rem;
+            align-self: center;
+
+            @media (max-width: map.get($width, tablet-portrait)) {
+                width: 20.5rem;
+                height: 20.5rem;
+                border: .8rem solid map.get($colors, primary);
+            }
+        }
+
+        &--card {
+            position: absolute;
+            top: -9.8rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+            color: map.get($colors, primary);
+
+            @media (max-width: map.get($width, tablet-portrait)) {
+                top: -12.8rem;
+            }
+        }
+
+        &--wrap {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2.8rem;
+
+            @media(max-width: map.get($width, tablet-portrait)) {
+                margin-bottom: 6rem;
+            }
+
+            @media(max-width: map.get($width, mobile)) {
+                margin-bottom: 6.2rem;
+            }
+        }
+
+        &--name {
+            font-size: 2.2rem;
+            font-weight: 500;
+            // line-height: 3rem;
+            margin-bottom: .25rem;
+
+            @media (max-width: map.get($width, tablet-portrait)) {
+                font-size: 3rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        &--nickname {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 400;
+            color: map.get($colors, pink_lite);
+            font-size: 1.9rem;
+            letter-spacing: .01rem;
+
+            @media (max-width: map.get($width, tablet-portrait)) {
+                display: inline-block;
+                font-size: 2.4rem;
+                margin-left: 2rem;
+            }
+
+
+            img {
+                width: 1.5rem;
+                margin-left: .8rem;
+
+                @media (max-width: map.get($width, tablet-portrait)) {
+                    margin-left: 0.5rem;
+                    scale: 1.2;
+                }
+            }
+        }
+
+        &--stats {
+            margin-bottom: 3.8rem;
+
+            @media (max-width: map.get($width, tablet-portrait)) {
+                margin-bottom: 4.8rem;
+            }
+
+            ul {
+                display: flex;
+                gap: 6.2rem;
+                text-align: center;
+
+                @media (max-width: map.get($width, tablet-portrait)) {
+                    gap: 8.2rem;
+                }
+
+                .amount {
+                    font-size: 3rem;
+                    font-weight: 500;
+                    line-height: 3.2rem;
+
+                    @media (max-width: map.get($width, tablet-portrait)) {
+                        line-height: 0;
+                        font-size: 4rem;
+                        margin-bottom: 2.5rem;
+                    }
+                }
+
+                .title {
+                    font-size: 1.8rem;
+                    opacity: .7;
+
+                    @media (max-width: map.get($width, tablet-portrait)) {
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+
+        &--btn {
+            font-size: 1.7rem;
+            display: block;
+            margin: 0 auto;
+            font-weight: 500;
+            padding: 1.1rem 8.2rem;
+
+            @media (max-width: map.get($width, tablet-portrait)) {
+                font-size: 2.4rem;
+                padding: 1.5rem 11.4rem;
+            }
+        }
+    }
+}

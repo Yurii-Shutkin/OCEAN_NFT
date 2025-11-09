@@ -1,0 +1,194 @@
+@use 'sass:map';
+@use '../vars' as *;
+
+.allbtn {
+
+    transition: filter .3s ease, transform .3s ease;
+
+
+    &:hover {
+        filter: brightness(0.85);
+    }
+
+    &:active {
+        transform: scale(.9);
+    }
+}
+
+.allbtn img {
+    transition: transform .3s ease;
+}
+
+
+.allbtn:active img {
+    transform: translateX(-1rem);
+}
+
+
+.btn {
+    color: map.get($colors, primary);
+    position: relative;
+    background: map.get($colors, gradient);
+    border: .2rem solid;
+    border-image: map.get($colors, reverce-gradient) 1;
+    box-shadow: 0px 4.42px 40px 0px #FF56F682;
+    transition: all 0.3s ease;
+
+    &:hover {
+        animation: hueRotate 3s linear infinite;
+    }
+
+    @keyframes hueRotate {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
+
+    &:active {
+        transform: scale(0.96);
+        filter: brightness(0.85);
+    }
+
+    span {
+        display: block;
+        background: map.get($colors, reverce-gradient);
+        text-align: center;
+    }
+
+
+    &--disbordered {
+        background: map.get($colors, reverce-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        transition: all 0.3s ease;
+
+        &:hover {
+            animation: hueRotate 3s linear infinite;
+        }
+
+        @keyframes hueRotate {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        &:active {
+            transform: scale(0.96);
+            filter: brightness(0.85);
+        }
+
+    }
+
+    &--non-active {
+        color: map.get($colors, primary);
+        border: .2rem solid;
+        border-image: map.get($colors, reverce-gradient) 1;
+        opacity: .5;
+    }
+
+    &--active {
+        background: map.get($colors, gradient);
+        color: map.get($colors, primary);
+        position: relative;
+        border: .2rem solid;
+        border-image: map.get($colors, reverce-gradient) 1;
+        box-shadow: 0px 4.42px 107.23px 0px #FF56F682;
+        border-radius: .2rem;
+    }
+
+    &--cutted-coners {
+        position: relative;
+        border-radius: 1px;
+        z-index: 0;
+        transition: all 0.3s ease;
+
+        &:hover {
+            &::before {
+                animation: hueRotate 3s linear infinite;
+            }
+
+            &::after {
+                animation: hueRotate 3s linear infinite;
+
+            }
+        }
+
+        @keyframes hueRotate {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        &:active {
+            transform: scale(0.96);
+            filter: brightness(0.85);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: .3rem;
+            background: map.get($colors, gradient);
+            clip-path: polygon(4rem 0,
+                    100% 0,
+                    100% 4.5rem,
+                    19rem 100%,
+                    0 100%,
+                    0 2rem);
+            z-index: -1;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: .2rem;
+            border-radius: .3rem;
+            background: map.get($colors, reverce-gradient);
+            clip-path: polygon(3.9rem 0,
+                    100% 0,
+                    100% 4.2rem,
+                    18.7rem 100%,
+                    0 100%,
+                    0 2rem);
+            z-index: -1;
+        }
+    }
+}
+
+.explore__btn-w375 {
+    display: none;
+    margin: 0 auto;
+    color: #fff;
+    border: .2rem solid;
+    border-image: map.get($colors, gradient) 1;
+    padding: 1.8rem;
+    transition: scale ease .5s;
+
+    &:active {
+        scale: .8;
+    }
+
+    img {
+        max-width: 25%;
+        margin-left: 1rem;
+    }
+
+    @media(max-width: map.get($width, mobile)) {
+        display: block;
+        font-size: 2.15rem;
+    }
+}

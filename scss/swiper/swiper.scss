@@ -1,0 +1,31 @@
+@use 'sass:map';
+@use '../vars' as *;
+
+.nft-cards__swiper {
+
+    @media(max-width: map.get($width, pc)) {
+        max-width: 1620px;
+    }
+
+    @media(max-width: map.get($width, lap-top)) {
+        max-width: 1226px;
+    }
+
+    .swiper-slide {
+        width: 304px;
+    }
+}
+
+.collections__swiper {
+
+
+
+    @media(max-width: map.get($width, lap-top)) {
+        max-width: 1226px;
+    }
+
+    @media(max-width: map.get($width, mobile)) {
+        margin-bottom: 7.6rem;
+    }
+
+}

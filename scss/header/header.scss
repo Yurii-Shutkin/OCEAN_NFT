@@ -1,0 +1,105 @@
+@use 'sass:map';
+@use '../vars' as *;
+
+@use './burger.scss' as *;
+@use './banner.scss' as *;
+
+.header {
+
+    @media (max-width: map.get($width, tablet)) {
+        margin-bottom: 10.5rem;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4.4rem 10rem;
+        margin-left: 5px;
+        margin-bottom: 5.9rem;
+
+        @media (max-width: 1000px) {
+
+            padding: 4.4rem;
+        }
+
+        @media (max-width: map.get($width, mobile)) {
+            margin-bottom: 6rem;
+            padding: 4.4rem 5rem 5rem 3rem;
+        }
+
+        &__logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.7rem;
+
+            @media (max-width: map.get($width, mobile)) {
+                font-size: 3rem;
+            }
+
+            &-icon {
+                @media (max-width: map.get($width, mobile)) {
+                    width: 15px;
+                    margin-right: 3px;
+                }
+            }
+
+            &-title {
+                color: rgba(map.get($colors, primary), .6);
+
+                span {
+                    color: map.get($colors, primary);
+                }
+            }
+        }
+
+        &__bar {
+
+            @media(max-width: 576px) {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                justify-content: flex-start;
+                gap: 6rem;
+                color: map.get($colors, primary);
+                font-size: 1.7rem;
+                margin-right: 23.4rem;
+                letter-spacing: .07rem;
+            }
+
+            &-item {
+                opacity: .6;
+
+                transition: opasity .3s ease;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__cart {
+
+            @media(max-width: 576px) {
+                display: none;
+                ;
+            }
+
+            &-cart {
+                display: flex;
+                gap: 4rem;
+                align-items: center;
+
+                a {
+                    transition: transform .3s ease;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}

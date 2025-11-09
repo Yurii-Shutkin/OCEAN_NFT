@@ -1,0 +1,114 @@
+@use 'sass:map';
+@use 'fonts' as *;
+@use 'components/button' as *;
+@use 'vars' as *;
+@use 'reset' as *;
+@use 'swiper/swiper' as *;
+@use 'header/header' as *;
+@use 'parthners/parthners' as *;
+@use 'nft-card/nft-card' as *;
+@use 'explore/explore' as *;
+@use 'collections/collections' as *;
+@use 'sellers/sellers' as *;
+@use 'nft-info/nft-info' as *;
+@use 'subscribe/subscribe' as *;
+@use 'footer/footer' as *;
+
+html,
+body {
+    font-size: 62.5%;
+
+    @media (max-width: map.get($width, pc)) {
+        font-size: 70%;
+    }
+
+    @media (max-width: map.get($width, lap-top)) {
+        font-size: 62.5%;
+    }
+
+    @media (max-width: 1320px) {
+        font-size: 50%;
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 40%;
+    }
+
+    @media(max-width: map.get($width, tablet)) {
+        font-size: 35%;
+    }
+}
+
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+h1 {
+    font-size: 7.4rem;
+}
+
+span {
+    outline: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+button {
+    outline: none;
+    border: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-focus-ring-color: transparent;
+    background: inherit;
+
+}
+
+summary {
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.bg {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.blur-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    background: url('../src/img/backgrounds/main_bg.jpg') center/cover no-repeat;
+    filter: blur(5rem);
+    scale: 1.1;
+    z-index: -1;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 9.5rem;
+
+    @media (max-width: map.get($width, pc)) {
+        max-width: map.get($width, pc);
+    }
+
+    @media (max-width: map.get($width, lap-top)) {
+        max-width: map.get($width, lap-top);
+    }
+
+    @media (max-width: 1000px) {
+        padding: 0 5.5rem;
+    }
+
+    @media (max-width: map.get($width, mobile)) {
+        max-width: map.get($width, mobile);
+    }
+}

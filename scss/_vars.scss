@@ -1,0 +1,29 @@
+@use 'sass:map';
+
+$colors: (
+    primary: #fff,
+    gray: #474A57,
+    footer-gray: #D9DBE1,
+    green: #00FF66,
+    red: #FF0000,
+    pink: #FF56F6,
+    pink_lite: #FFB1EE,
+    aqua: #2EC5CE,
+    gradient: linear-gradient(90deg, #FF56F6, #43A5E3),
+    reverce-gradient: linear-gradient(270deg, #FF56F6, #43A5E3),
+    grey-gradient: linear-gradient(145.77deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 105.76%),
+    card-gradient: linear-gradient(90deg, rgba(194, 194, 194, 0.1) -1.52%, rgba(255, 255, 255, 0.024) 104.35%),
+    badge-red-bg: linear-gradient(74deg, rgba(182, 73, 73, 0), rgba(178, 0, 0, 0.72)),
+    badge-red-border: linear-gradient(0deg, rgba(235, 20, 20, 1), rgba(235, 20, 20, 0.67)),
+    badge-green-bg: rgba(0, 178, 71, 0.15),
+    badge-green-border: linear-gradient(260deg, rgba(0, 178, 71, 0.72), rgba(73, 182, 73, 0))
+);
+
+
+$width: (
+    pc: 1920px,
+    lap-top: 1440px,
+    tablet: 768px,
+    tablet-portrait: 576px,
+    mobile: 375px,
+);

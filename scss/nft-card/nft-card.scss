@@ -1,0 +1,336 @@
+@use 'sass:map';
+@use '../vars' as *;
+
+.top-nft {
+    margin-bottom: 19rem;
+    overflow-x: hidden;
+
+    @media(max-width: map.get($width, tablet)) {
+        margin-bottom: 15rem;
+
+    }
+
+    @media(max-width: map.get($width, tablet-portrait)) {
+        margin-bottom: 18.5rem;
+
+    }
+
+    @media(max-width: map.get($width, mobile)) {
+        margin-bottom: 19.3rem;
+
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        color: map.get($colors, primary);
+        font-size: 1.58rem;
+        letter-spacing: .01rem;
+
+        &.container {
+            margin-bottom: 4.4rem;
+
+            @media(max-width:map.get($width, mobile)) {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+    &__title {
+        position: relative;
+        left: .3rem;
+
+
+        @media(max-width: map.get($width, tablet-portrait)) {
+            font-size: 2.8rem;
+            left: -1rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__allbtn {
+        font-size: 2.3rem;
+
+        @media(max-width: map.get($width, tablet-portrait)) {
+            display: none;
+        }
+
+        img {
+            display: inline;
+            width: 25%;
+            margin-left: 1.85rem;
+        }
+    }
+}
+
+.nft-cards {
+    @media(max-width: map.get($width, mobile)) {
+        margin-bottom: 6.6rem;
+    }
+}
+
+.nft-card {
+    color: map.get($colors, primary);
+
+    &__img {
+        width: 100%;
+        display: block;
+        height: 34.8rem;
+
+        @media(max-width: map.get($width, tablet-portrait)) {
+            height: 47.8rem;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        border: .3rem solid;
+        border-image: map.get($colors, grey-gradient) 1;
+        padding: 4rem 2rem 2rem 3rem;
+        // max-width: fit-content;
+
+        @media(max-width: map.get($width, lap-top)) {
+            padding: 3.6rem 1.6rem 1.6rem 3rem;
+        }
+
+        @media(max-width: map.get($width, tablet-portrait)) {
+            // width: 54rem;
+            padding: 5.5rem 2.5rem 2.7rem 3.5rem;
+            justify-content: flex-start;
+        }
+    }
+
+    &__leftside {
+        @media(max-width: map.get($width, tablet-portrait)) {
+            // margin-right: 4rem;
+        }
+    }
+
+    &__title {
+        // font-size: 2rem;
+        letter-spacing: .02rem;
+        margin-bottom: .9rem;
+        white-space: nowrap;
+        font-size: 2rem;
+
+        @media(max-width: map.get($width, lap-top)) {
+            font-size: 2rem;
+        }
+
+        @media(max-width: map.get($width, tablet-portrait)) {
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__owner {
+        margin-bottom: 2.4rem;
+
+        .verified {
+            max-width: 1.6rem;
+        }
+
+        display: flex;
+        align-items: center;
+
+        @media(max-width: map.get($width, tablet-portrait)) {
+            margin-bottom: 3.4rem;
+
+        }
+
+        &--icon {
+            width: 3.5rem;
+
+            @media(max-width: map.get($width, tablet-portrait)) {
+                width: 4.5rem;
+                margin-right: 1rem;
+            }
+        }
+
+        &--nickname {
+            font-weight: 600;
+            margin-right: .5rem;
+            font-size: 1.8rem;
+
+            @media(max-width: map.get($width, lap-top)) {
+                font-size: 1.8rem;
+            }
+
+            @media(max-width: map.get($width, tablet-portrait)) {
+                font-size: 2rem;
+                margin-right: 3rem;
+            }
+
+        }
+    }
+
+    &__offer {
+        display: block;
+        font-size: 1.2rem;
+        opacity: .7;
+        font-weight: 600;
+        letter-spacing: .02rem;
+        margin-bottom: 1.2rem;
+
+        @media(max-width: map.get($width, tablet-portrait)) {
+            font-size: 1.45rem;
+        }
+    }
+
+    &__coin {
+        display: flex;
+        align-items: center;
+
+        &--icon {
+            margin-right: .6rem;
+        }
+
+        &--name {
+            font-size: 1.2rem;
+            letter-spacing: -0.05rem;
+            margin-right: .8rem;
+
+            @media(max-width: map.get($width, tablet-portrait)) {
+                font-size: 1.3rem;
+                margin-right: 2.2rem;
+            }
+        }
+
+        &--price {
+            font-size: 1.2rem;
+            letter-spacing: .03rem;
+            opacity: .7;
+
+            @media(max-width: map.get($width, tablet-portrait)) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__rightside {
+        margin-left: 2rem;
+
+        @media(max-width: map.get($width, mobile)) {
+            margin-left: 6rem;
+        }
+
+    }
+
+    &__timer {
+        margin-top: .4rem;
+        margin-left: .5rem;
+
+
+        &--msg {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 600;
+            opacity: .7;
+            letter-spacing: .04rem;
+            margin-bottom: .8rem;
+            margin-left: .7rem;
+
+            @media(max-width: map.get($width, tablet-portrait)) {
+                font-size: 1.4rem;
+                margin-left: 1.6rem;
+                margin-bottom: 1.3rem;
+            }
+        }
+
+        &--countdown {
+            margin-bottom: 3.3rem;
+
+            @media(max-width: map.get($width, tablet-portrait)) {
+                margin-bottom: 5.3rem;
+
+            }
+
+            ul {
+                display: flex;
+                text-align: center;
+                gap: 2.4rem;
+
+                @media(max-width: map.get($width, lap-top)) {
+                    gap: 2.4rem;
+                }
+
+                @media(max-width: map.get($width, tablet-portrait)) {
+                    gap: 3rem;
+
+                }
+
+                li {
+                    display: flex;
+                    flex-direction: column;
+
+                    @media(max-width: map.get($width, tablet-portrait)) {
+                        margin-left: 1.2rem;
+
+                    }
+                }
+            }
+        }
+
+        &--seconds {
+            font-size: 2rem;
+            font-weight: 600;
+
+            @media(max-width: map.get($width, tablet-portrait)) {
+                font-size: 2.5rem;
+
+            }
+        }
+
+        &--timing {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__btn {
+        white-space: nowrap;
+        width: 14.6rem;
+        font-size: 2rem;
+        padding: 1rem 0rem;
+
+        @media(max-width: map.get($width, lap-top)) {
+            width: 14.6rem;
+            font-size: 2rem;
+            padding: 1rem 0rem;
+
+        }
+
+        @media(max-width: map.get($width, tablet-portrait)) {
+            width: 100%;
+            font-size: 2.2rem;
+            padding: 1.8rem 1rem;
+        }
+
+        img {
+            display: inline;
+            width: 20%;
+            margin-left: 1.2rem;
+
+            @media(max-width: map.get($width, tablet-portrait)) {
+                width: 22%;
+                margin-left: 3rem;
+
+            }
+        }
+    }
+}
+
+.explore__btn {
+    color: map.get($colors, primary);
+    font-size: 2.5rem;
+    background: transparent;
+
+    &::after {
+        content: "";
+        background: transparent;
+    }
+
+    img {
+        width: 30%;
+    }
+}

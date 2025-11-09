@@ -1,0 +1,84 @@
+@use 'sass:map';
+@use '../vars' as *;
+
+.nft-info {
+    position: relative;
+    background-image: url('../../src/img/backgrounds/feature_bg.jpg');
+    background-position: center;
+    width: 100%;
+    height: 50rem;
+    margin-bottom: 26rem;
+
+    @media(max-width: map.get($width, mobile)) {
+        height: 53.5rem;
+        margin-bottom: 34rem;
+    }
+
+    &__card {
+        position: absolute;
+        max-width: fit-content;
+        max-width: 36%;
+        color: map.get($colors, primary);
+        backdrop-filter: blur(5rem);
+        border: .3rem solid;
+        border-image: map.get($colors, grey-gradient) 1;
+        padding: 5.2rem 6rem 4rem 6rem;
+        bottom: -11.5rem;
+        right: 12.4rem;
+
+        @media(max-width: map.get($width, tablet)) {
+            max-width: 50%;
+            padding: 4rem 5rem;
+            right: 25%;
+        }
+
+        @media(max-width: map.get($width, mobile)) {
+            max-width: 60rem;
+            padding: 5.8rem 6rem 5rem 7rem;
+            bottom: -17.3rem;
+            right: 3.8rem;
+
+        }
+
+        &--title {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            letter-spacing: .16rem;
+
+            @media(max-width: map.get($width, mobile)) {
+                font-size: 4.6rem;
+                margin-bottom: 2.4rem;
+            }
+        }
+
+        &--desc {
+            display: block;
+            font-size: 1.8rem;
+            margin-bottom: 4rem;
+            line-height: 1.8;
+
+            @media(max-width: map.get($width, mobile)) {
+                font-size: 2.2rem;
+                margin-bottom: 5.5rem;
+                line-height: 1.65;
+            }
+        }
+
+        &--links {
+            font-size: 1.6rem;
+
+            @media(max-width: map.get($width, mobile)) {
+                font-size: 1.9rem;
+            }
+
+            a {
+                margin-right: 3.7rem;
+
+                &:hover {
+                    opacity: .8;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

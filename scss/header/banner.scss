@@ -1,0 +1,545 @@
+@use 'sass:map';
+@use '../vars' as *;
+@use '../mixins' as *;
+
+
+
+.banner {
+    position: relative;
+    margin-bottom: .2rem;
+    display: flex;
+    max-width: 100%;
+    color: map.get($colors, primary);
+    line-height: 1.1;
+    letter-spacing: 0.07rem;
+    flex-wrap: wrap;
+
+    .line {
+        position: absolute;
+        top: 28.5rem;
+
+        @media(max-width: map.get($width, pc)) {
+            left: 60rem;
+        }
+
+        @media(max-width: map.get($width, lap-top)) {
+            left: 65rem;
+        }
+
+        @media(max-width: map.get($width, tablet)) {
+            display: none;
+        }
+    }
+
+    .elipce_1 {
+        position: absolute;
+
+        opacity: .5;
+        filter: blur(5rem);
+
+
+        @media(max-width: map.get($width, pc)) {
+            top: 27rem;
+            left: -10rem;
+        }
+
+        @media(max-width: map.get($width, tablet)) {
+            width: 30%;
+            left: -5rem;
+            top: 30rem;
+        }
+
+        @media(max-width: map.get($width, mobile)) {
+            width: 70%;
+            left: -10rem;
+            top: 96rem;
+        }
+    }
+
+    .elipce_2 {
+        position: absolute;
+        top: 24rem;
+        left: 49rem;
+        opacity: .5;
+        filter: blur(5rem);
+
+        @media(max-width: map.get($width, mobile)) {
+            display: none;
+        }
+    }
+
+    .leftside-wrap {
+        max-width: 60%;
+        margin-right: 6rem;
+
+        @media (max-width: 1000px) {
+            margin-right: 0;
+        }
+
+        @media (max-width: 576px) {
+            margin-right: 0;
+            flex: 1;
+            min-width: 100%;
+            margin-bottom: 5rem;
+            text-align: center;
+        }
+
+        @media (max-width: map.get($width, mobile)) {
+            max-width: 100%;
+            order: 1;
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+
+    .rightside-wrap {
+
+        @media (max-width: 576px) {
+            margin: 0 auto;
+        }
+
+        @media (max-width: map.get($width, mobile)) {
+            order: 3;
+            margin-bottom: 16rem;
+        }
+    }
+
+    &__title {
+        font-size: 7rem;
+        margin-bottom: 1.2rem;
+        line-height: 1.2;
+        letter-spacing: 0.25rem;
+
+        span {
+            background: map.get($colors, gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+
+        @media (max-width: 1000px) {
+            font-size: 6rem;
+        }
+
+        @media (max-width: map.get($width, mobile)) {
+            font-size: 8.2rem;
+            line-height: 1.25;
+            letter-spacing: 0;
+            margin-bottom: 4.2rem;
+        }
+    }
+
+    &__desc {
+        max-width: 80%;
+        opacity: .6;
+        font-weight: 400;
+        font-size: 2.3rem;
+        line-height: 1.8;
+        letter-spacing: 0.03rem;
+        margin-bottom: 3.5rem;
+
+        @media (max-width: 576px) {
+            max-width: 100%;
+        }
+
+        @media (max-width: map.get($width, mobile)) {
+            max-width: 100%;
+            margin-bottom: 5.7rem;
+        }
+    }
+
+    .btn--cutted-coners {
+        margin-right: 3.2rem;
+        display: flex;
+
+        @media (max-width: map.get($width, tablet)) {
+            font-size: 1.5rem;
+            width: 30%;
+        }
+
+        @media (max-width: map.get($width, mobile)) {
+            font-size: 2rem;
+            max-width: 24rem;
+            margin-right: 4.1rem;
+        }
+
+
+        span {
+            padding: 2.2rem 1.5rem 2rem 5.8rem;
+
+            @media (max-width: map.get($width, tablet)) {
+                padding: 2.2rem 1.5rem 2rem 4.8rem;
+            }
+
+            @media (max-width: map.get($width, mobile)) {
+                padding: 2.2rem 1.5rem 2.1rem 5rem;
+            }
+
+
+        }
+    }
+
+    .btn--disbordered {
+        span {
+            letter-spacing: .04rem;
+            padding: 2rem 0rem;
+
+        }
+
+        @media (max-width: map.get($width, mobile)) {
+            font-size: 2rem;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        margin-bottom: 4rem;
+
+        @media (max-width: 576px) {
+            justify-content: center;
+        }
+
+        @media (max-width: map.get($width, mobile)) {
+            justify-content: start;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        font-size: 1.7rem;
+        letter-spacing: .04rem;
+        margin-bottom: 3.6rem;
+
+        @media (max-width: map.get($width, tablet)) {
+            flex: 1;
+            max-width: 22rem;
+        }
+
+        @media (max-width: map.get($width, mobile)) {
+            margin-bottom: 4.4rem;
+        }
+
+        img {
+            padding-right: 2.3rem;
+            width: 35%;
+
+            @media (max-width: 1000px) {
+                width: 21%;
+                padding-right: 0;
+                margin-left: 0;
+            }
+
+            @media (max-width: map.get($width, tablet)) {
+                // width: 21%;
+                // padding-right: 0;
+                // margin-left: 0;
+            }
+
+            @media (max-width: map.get($width, mobile)) {
+                width: 20%;
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__stats {
+        font-size: 3.5rem;
+
+        @media(max-width: map.get($width, mobile)) {
+            margin-bottom: 7rem;
+        }
+
+        ul {
+            display: flex;
+            gap: 3.7rem;
+            line-height: .65;
+            letter-spacing: .09rem;
+
+            @media (max-width: 576px) {
+                justify-content: center;
+            }
+
+            @media(max-width: map.get($width, mobile)) {
+                gap: 10.4rem;
+                justify-content: flex-start;
+                margin-bottom: 0;
+            }
+
+            li {
+                border-right: 1px solid #FFFFFF42;
+                padding-right: 1.1rem;
+
+                @media(max-width: map.get($width, mobile)) {
+                    border: none;
+                }
+
+                &:last-child {
+                    position: relative;
+                    border: none;
+                    left: 1rem;
+                }
+
+                p {
+                    @media(max-width: map.get($width, mobile)) {
+                        font-size: 3rem;
+                        margin-bottom: 1.6rem;
+                    }
+                }
+
+                span {
+                    @media(max-width: map.get($width, mobile)) {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+        span {
+            font-family: sans-serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+    }
+
+    .mask {
+        border-radius: 1rem;
+        box-shadow:
+            0 2.4rem .5rem -.5rem rgba(0, 0, 0, .9);
+
+        @media (max-width: map.get($width, mobile)) {
+            max-width: 56rem;
+            object-fit: cover;
+        }
+    }
+
+    &__img {
+        display: block;
+        position: relative;
+        top: 1.4rem;
+
+        border-radius: 1.2rem;
+        clip-path: polygon(8rem 0,
+                100% 0,
+                100% 100%,
+                0 100%,
+                0 5.5rem);
+
+        @media(max-width: map.get($width, pc)) {
+            width: 30rem;
+            height: 35rem;
+        }
+
+        @media(max-width: map.get($width, pc)) {
+            width: 36rem;
+            height: 42.7rem;
+        }
+
+        @media (max-width: map.get($width, mobile)) {
+
+            width: 100%;
+            height: 70rem;
+            clip-path: polygon(12.5rem 0, 100% 0, 100% 100%, 0 100%, 0 8.5rem);
+        }
+    }
+
+    .border-gradient {
+        position: relative;
+        max-width: 30.2rem;
+        padding: .22rem;
+        bottom: 9rem;
+        left: 14rem;
+        border-radius: 1rem;
+        backdrop-filter: blur(1rem);
+
+        background: map.get($colors, grey-gradient);
+        clip-path: polygon(4rem 0,
+                100% 0,
+                100% 100%,
+                0 100%,
+                0 4rem);
+
+        @media(max-width: map.get($width, pc)) {
+            left: 8rem
+        }
+
+        @media(max-width: map.get($width, lap-top)) {
+            left: 14rem
+        }
+
+        @media(max-width: map.get($width, tablet)) {
+            left: 10rem
+        }
+
+        @media(max-width: map.get($width, mobile)) {
+            scale: 1.94;
+            left: 12.5rem;
+            bottom: .3rem;
+        }
+    }
+
+    .auction-card {
+        display: flex;
+        justify-content: space-between;
+        backdrop-filter: blur(2rem);
+        border-radius: .8rem;
+        padding: 3.1rem 2rem 1.3rem 2rem;
+        background: transparent;
+        background: map.get($colors, card-gradient);
+        clip-path: polygon(4rem 0,
+                100% 0,
+                100% 100%,
+                0 100%,
+                0 4rem);
+
+
+
+        &-title {
+            font-size: 1.54rem;
+            letter-spacing: .01rem;
+            margin-bottom: .8rem;
+            white-space: nowrap;
+        }
+
+        &-user {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+
+            &-icon {
+                display: block;
+                width: 2.6rem;
+                height: 2.6rem;
+                border-radius: 50%;
+                margin-right: .2rem;
+
+                @media(max-width: map.get($width, tablet)) {}
+            }
+
+            &-nickname {
+                font-size: 1.3rem;
+                font-weight: 600;
+                letter-spacing: .02rem;
+                margin-right: .3rem;
+            }
+
+            &-verified {
+                @media(max-width: map.get($width, mobile)) {
+                    scale: .55;
+                }
+            }
+        }
+
+        &-offer {
+            p {
+                font-size: 1rem;
+                opacity: .7;
+                letter-spacing: .001rem;
+                margin-bottom: .8rem;
+            }
+
+            &-coin {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 1rem;
+                    margin-right: .25rem;
+                }
+
+                .coin-name {
+                    font-size: .8rem;
+                    margin-right: .5rem;
+                }
+
+                .coin-price {
+                    font-size: 1rem;
+                    letter-spacing: .001rem;
+                    opacity: .7;
+                }
+            }
+        }
+
+        &-timer {
+
+            &-msg {
+                display: block;
+                margin: .3rem 0 .74rem 5rem;
+                font-weight: 600;
+                font-size: .9rem;
+                letter-spacing: .04rem;
+                opacity: .7;
+            }
+
+            &-countdown {
+                ul {
+                    display: flex;
+                    margin-left: 4.4rem;
+                    gap: 2rem;
+                    text-align: center;
+                    margin-bottom: 2.6rem;
+
+                    .seconds {
+                        display: block;
+                        font-size: 1.6rem;
+                        margin-bottom: .1rem;
+                    }
+
+                    .timing {
+                        font-size: 1rem;
+                        letter-spacing: 0;
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+
+        &-btn {
+            padding: 1.1rem 1.3rem;
+            border-radius: .5rem;
+            position: relative;
+            z-index: 1;
+            color: map.get($colors, primary);
+            background: map.get($colors, gradient);
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            text-wrap: nowrap;
+            margin-left: 4rem;
+
+            &:hover {
+                animation: hueRotate 3s linear infinite;
+            }
+
+            @keyframes hueRotate {
+                0% {
+                    filter: hue-rotate(0deg);
+                }
+
+                100% {
+                    filter: hue-rotate(360deg);
+                }
+            }
+
+            &:active {
+                transform: scale(0.96);
+                filter: brightness(0.85);
+            }
+
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                padding: .2rem;
+                @include round-gradient-border(map.get($colors, reverce-gradient))
+            }
+
+            img {
+                display: inline-block;
+                max-width: 2.4rem;
+                margin-left: .55rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,165 @@
+@use 'sass:map';
+@use '../vars' as *;
+
+.explore {
+    @media (max-width: map.get($width, pc)) {
+        margin-bottom: 0rem;
+    }
+
+    @media (max-width: map.get($width, lap-top)) {
+        margin-bottom: 1.4rem;
+    }
+
+    @media (max-width: map.get($width, mobile)) {
+        margin-bottom: 14.4rem;
+    }
+
+    &__wrap {
+        display: flex;
+
+        @media (max-width: map.get($width, pc)) {
+            justify-content: center;
+        }
+
+        @media (max-width: map.get($width, lap-top)) {
+            justify-content: flex-start;
+        }
+
+        @media (max-width: 1000px) {
+            justify-content: center;
+        }
+
+        @media (max-width: 576px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__leftside {
+        @media (max-width: 576px) {
+            margin-bottom: 10rem;
+        }
+
+        @media (max-width: map.get($width, mobile)) {
+            margin-bottom: 6.8rem;
+        }
+    }
+
+    &__title {
+        color: map.get($colors, primary);
+        font-size: 2.4rem;
+        margin-bottom: 4rem;
+
+        @media(max-width: map.get($width, mobile)) {
+            font-size: 2.8rem;
+            margin-left: -1.2rem;
+            letter-spacing: .02rem;
+            margin-bottom: 3.5rem;
+        }
+    }
+
+    &__categories {
+        margin-bottom: 4rem;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 33.8rem);
+            gap: 3.4rem;
+
+            @media(max-width: 1000px) {
+                grid-template-columns: repeat(2, 30rem);
+                gap: 3rem;
+            }
+
+            @media (max-width: map.get($width, mobile)) {
+                gap: 0;
+                margin-left: 5rem;
+            }
+        }
+    }
+
+
+    &__category--btn {
+        font-size: 2.2rem;
+        padding: 3.1rem 0;
+        width: 33.8rem;
+        letter-spacing: .12rem;
+
+        transition: opacity .3s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        @media(max-width: 1000px) {
+            padding: 2rem 0;
+            width: 28rem;
+
+        }
+
+        @media(max-width: map.get($width, mobile)) {
+            padding: 2.4rem 0;
+            width: 27.6rem;
+            margin-left: -1.3rem;
+            font-size: 1.9rem;
+            margin-bottom: 3rem;
+
+        }
+    }
+
+    &__picture {
+        position: relative;
+
+        @media(max-width: map.get($width, pc)) {
+            width: 40rem;
+            margin-left: 14rem;
+            bottom: 16.4rem;
+        }
+
+        @media(max-width: map.get($width, lap-top)) {
+            width: 39.9rem;
+            margin-left: 11.2rem;
+            bottom: 11.4rem;
+
+        }
+
+        @media(max-width: 1000px) {
+            width: 35rem;
+        }
+
+        @media(max-width: map.get($width, tablet)) {
+            width: 30rem;
+            bottom: 5.4rem;
+            margin-left: 8.2rem;
+        }
+
+        @media (max-width: map.get($width, mobile)) {
+            width: 33rem;
+            margin-left: 0;
+        }
+
+    }
+
+    &__allbtn {
+        // position: relative;
+        display: block;
+        color: map.get($colors, primary);
+        font-size: 1.8rem;
+        margin: 0 0 0 auto;
+        // bottom: 14rem;
+
+        @media (max-width: map.get($width, mobile)) {
+            font-size: 1.4rem;
+            margin: -4rem .8rem 0 auto;
+        }
+
+
+        img {
+            width: 30%;
+            margin-left: 1rem;
+
+            @media (max-width: map.get($width, mobile)) {
+                width: 24%;
+            }
+        }
+    }
+}

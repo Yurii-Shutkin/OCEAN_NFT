@@ -1,0 +1,44 @@
+@use 'sass:map';
+@use '../vars' as *;
+
+.parthners {
+    width: 100%;
+
+    @media(max-width: map.get($width, pc)) {
+        margin-bottom: 15rem;
+    }
+
+    @media(max-width: map.get($width, lap-top)) {
+        margin-bottom: 20rem;
+
+    }
+
+    @media(max-width: map.get($width, tablet)) {
+        margin-bottom: 12rem;
+        margin-top: 8rem;
+
+    }
+
+    @media (max-width: map.get($width, mobile)) {
+        order: 2;
+        margin-bottom: 7rem;
+        margin-top: 0;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media(max-width: map.get($width, tablet-portrait)) {
+            display: grid;
+            grid-template: 1fr 1fr / 1fr 1fr;
+            gap: 4rem
+        }
+    }
+
+    &__link img {
+        display: block;
+        width: 88%;
+    }
+}

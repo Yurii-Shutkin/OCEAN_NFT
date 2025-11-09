@@ -1,0 +1,339 @@
+@use 'sass:map';
+@use '../vars' as *;
+
+.footer {
+    font-family: 'Inter';
+    color: map.get($colors, primary);
+    width: 90%;
+    margin: 0 auto 4rem;
+
+    @media(max-width: map.get($width, mobile)) {
+        margin-bottom: 18rem;
+    }
+
+    &__main {
+        display: flex;
+        align-items: center;
+        padding: 8.2rem 0 7.8rem 0;
+        border-top: 1px solid rgba(255, 255, 255, .2);
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
+        margin-bottom: 2.8rem;
+
+        @media(max-width:1340px) {
+            justify-content: center;
+        }
+
+        @media(max-width: map.get($width, tablet)) {
+            justify-content: space-between;
+        }
+
+        @media(max-width: map.get($width, tablet-portrait)) {
+            flex-direction: column;
+            padding: .2rem 0 2.8rem 0;
+            align-items: stretch;
+            border-bottom: none;
+        }
+
+        @media(max-width: map.get($width, mobile)) {
+            margin-bottom: 2.3rem;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 2.7rem;
+
+        @media(max-width: map.get($width, tablet-portrait)) {
+            margin-bottom: 5.5rem;
+        }
+
+        &--icon {
+            @media(max-width: map.get($width, tablet-portrait)) {
+                margin-right: 1rem;
+            }
+        }
+
+        &--title {
+            color: map.get($colors, primary);
+            font-size: 1.8rem;
+
+            @media(max-width: map.get($width, tablet-portrait)) {
+                font-size: 3.6rem;
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__desc {
+        display: block;
+        font-size: 1.4rem;
+        line-height: 1.7;
+        margin-bottom: 2.5rem;
+
+        @media(max-width: map.get($width, tablet-portrait)) {
+            font-size: 2.8rem;
+            line-height: 1.67;
+            margin-bottom: 4.5rem;
+        }
+    }
+
+    &__info {
+        max-width: 20%;
+        margin-right: 7.8rem;
+
+        @media(max-width: map.get($width, tablet-portrait)) {
+            max-width: 100%;
+            margin-right: 0;
+            margin-top: 5rem;
+            margin-left: 1rem;
+        }
+    }
+
+    &__socials {
+
+        @media(max-width: map.get($width, tablet-portrait)) {
+            margin-bottom: 8.5rem;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+
+            @media(max-width: map.get($width, tablet)) {
+                gap: 0;
+                justify-content: space-between;
+            }
+
+            @media(max-width: map.get($width, tablet)) {
+                gap: 2rem;
+                justify-content: flex-start;
+            }
+        }
+
+        &--item {
+            display: flex;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #ffffff1a;
+            border-radius: 50%;
+            align-items: center;
+            transition: transform .3s ease;
+
+            @media(max-width: map.get($width, tablet-portrait)) {
+                width: 5rem;
+                height: 5rem;
+                margin-right: 1rem;
+            }
+
+
+            a {
+                display: block;
+                z-index: 4;
+                margin: 0 auto;
+            }
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    &__nav {
+        padding: 1rem 0 0 0;
+    }
+
+    &__categories {
+
+        &--colums {
+            display: flex;
+            gap: 8.55rem;
+
+            @media (max-width: map.get($width, tablet)) {
+                gap: 4.5rem;
+            }
+
+            @media(max-width: map.get($width, tablet-portrait)) {
+                flex-direction: column;
+                gap: 4rem;
+            }
+        }
+
+        &--colums input:checked+label+ul {
+            display: block;
+        }
+
+        &--wrap {
+            @media(max-width: map.get($width, tablet-portrait)) {
+                border-bottom: .2rem solid rgba(255, 255, 255, .2)
+            }
+        }
+
+        &--wrap:last-child {
+            border-bottom: none;
+        }
+
+        &--col {
+            display: none;
+        }
+
+        &--col:checked+.footer__categories--title+.footer__categories--dropdown {
+            @media (max-width: map.get($width, tablet-portrait)) {
+                max-height: 100rem;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        &--col:checked+.footer__categories--title img {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease;
+        }
+
+        &--title img {
+            transition: transform 0.3s ease;
+        }
+
+        &--title {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+
+            img {
+                display: none;
+                margin-right: 5.2rem;
+            }
+
+            @media(max-width: map.get($width, pc)) {
+                pointer-events: none;
+            }
+
+            @media(max-width: map.get($width, tablet-portrait)) {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                pointer-events: visible;
+                font-size: 3.5rem;
+                margin-left: 1.2rem;
+                letter-spacing: .17rem;
+                padding-bottom: 3.3rem;
+                margin-bottom: 0;
+
+                img {
+                    display: block;
+                }
+            }
+        }
+
+        &--dropdown {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            @media(max-width: map.get($width, tablet)) {
+                gap: 4rem;
+            }
+
+            @media(max-width: map.get($width, tablet-portrait)) {
+                padding: 0 2rem -2rem -2rem;
+                margin-left: 2rem;
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transform: translateY(-5px);
+
+                transition:
+                    max-height 0.4s ease,
+                    opacity 0.4s ease,
+                    transform 0.4s ease;
+            }
+        }
+
+        &--link {
+            font-size: 1.4rem;
+
+            @media(max-width: map.get($width, tablet-portrait)) {
+                font-size: 2.6rem;
+                margin-bottom: 3rem;
+            }
+
+            .sticker {
+                font-size: 2rem;
+                color: map.get($colors, aqua);
+                line-height: 0;
+            }
+
+            &:hover {
+                opacity: .8;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-right: 8rem;
+
+        @media (max-width: map.get($width, tablet-portrait)) {
+            flex-direction: column-reverse;
+            font-size: 2.6rem;
+            margin-right: 0;
+        }
+
+        span {
+            @media (max-width: map.get($width, tablet-portrait)) {
+                text-align: center;
+            }
+        }
+
+        &--links {
+            margin-right: 7.6rem;
+
+            @media (max-width: map.get($width, lap-top)) {
+                margin-right: 0;
+            }
+
+            @media (max-width: map.get($width, tablet-portrait)) {
+                margin-bottom: 8.5rem;
+            }
+
+            ul {
+                display: flex;
+
+                @media (max-width: map.get($width, tablet-portrait)) {
+                    display: flex;
+                    justify-content: space-around;
+                }
+
+                li {
+                    padding: 0 1rem;
+                    border-right: 1px solid #fff;
+
+                    @media (max-width: map.get($width, tablet-portrait)) {
+                        border: none;
+
+                        &:last-child {
+                            display: none;
+                        }
+                    }
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    &:hover {
+                        opacity: .8;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
