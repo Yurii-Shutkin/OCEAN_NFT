@@ -1520,7 +1520,7 @@ svg {
 }
 .collections__bg {
   height: 19rem;
-  background-image: url("OCEAN_NFT/img/backgrounds/cards_bg.jpg");
+  background-image: url("../../../OCEAN_NFT/img/backgrounds/cards_bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1934,7 +1934,7 @@ svg {
 
 .nft-info {
   position: relative;
-  background-image: url("OCEAN_NFT/img/backgrounds/feature_bg.jpg");
+  background-image: url("../../../OCEAN_NFT/img/backgrounds/feature_bg.jpg");
   background-position: center;
   width: 100%;
   height: 50rem;
