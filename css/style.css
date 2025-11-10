@@ -1934,7 +1934,7 @@ svg {
 
 .nft-info {
   position: relative;
-  background-image: url("../../src/img/backgrounds/feature_bg.jpg");
+  background-image: url("../../img/backgrounds/feature_bg.jpg");
   background-position: center;
   width: 100%;
   height: 50rem;
@@ -2554,7 +2554,7 @@ summary::-webkit-details-marker {
   left: 0;
   width: 100%;
   bottom: 0;
-  background: url("../img/backgrounds/main_bg.jpg") center/cover no-repeat;
+  background: url("../../img/backgrounds/main_bg.jpg") center/cover no-repeat;
   filter: blur(5rem);
   scale: 1.1;
   z-index: -1;
