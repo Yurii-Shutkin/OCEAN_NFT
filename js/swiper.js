@@ -5,6 +5,7 @@ const swiper = new Swiper('.nft-cards__swiper', {
   centeredSlides: true,
   watchOverflow: true,
   slidesOffsetBefore: -20,
+  grabCursor: true,
   scrollbar: {
       el: '.swiper-scrollbar',
       draggable: true,
@@ -36,6 +37,8 @@ const collectionSwiper = new Swiper('.collections__swiper', {
   slidesPerView: 'auto',
   freeMode: false,
   // loop: true,
+  grabCursor: true,
+
   centeredSlides: true,
 
   spaceBetween: 30,

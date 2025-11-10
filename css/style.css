@@ -1520,7 +1520,7 @@ svg {
 }
 .collections__bg {
   height: 19rem;
-  background-image: url("../../src/img/backgrounds/cards_bg.jpg");
+  background-image: url("../../img/backgrounds/cards_bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2554,7 +2554,7 @@ summary::-webkit-details-marker {
   left: 0;
   width: 100%;
   bottom: 0;
-  background: url("../src/img/backgrounds/main_bg.jpg") center/cover no-repeat;
+  background: url("../img/backgrounds/main_bg.jpg") center/cover no-repeat;
   filter: blur(5rem);
   scale: 1.1;
   z-index: -1;
