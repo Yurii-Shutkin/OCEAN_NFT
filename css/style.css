@@ -2509,6 +2509,12 @@ body {
     font-size: 35%;
   }
 }
+@media (max-width: 320px) {
+  html,
+  body {
+    font-size: 28%;
+  }
+}
 
 img {
   -webkit-user-drag: none;

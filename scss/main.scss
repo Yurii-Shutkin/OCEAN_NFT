@@ -37,6 +37,10 @@ body {
     @media(max-width: map.get($width, tablet)) {
         font-size: 35%;
     }
+
+    @media(max-width: 320px) {
+        font-size: 28%;
+    }
 }
 
 img {
