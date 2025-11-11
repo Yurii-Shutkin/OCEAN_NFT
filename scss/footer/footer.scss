@@ -5,10 +5,11 @@
     font-family: 'Inter';
     color: map.get($colors, primary);
     max-width: 1280px;
-    margin: 0px 0rem 4rem 7.5rem;
+    margin: 0px 0rem 0 7.5rem;
+    padding-bottom: 4rem;
 
     @media(max-width: map.get($width, mobile)) {
-        margin-bottom: 18rem;
+        padding-bottom: 14rem;
         margin-left: 3.5rem;
     }
 
@@ -312,11 +313,7 @@
         }
 
         &--links {
-            margin-right: 7.6rem;
-
-            @media (max-width: map.get($width, lap-top)) {
-                margin-right: 0;
-            }
+            margin-right: -13px;
 
             @media (max-width: map.get($width, tablet-portrait)) {
                 margin-bottom: 8.5rem;
