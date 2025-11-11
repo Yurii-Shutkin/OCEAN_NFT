@@ -1,8 +1,7 @@
 const swiper = new Swiper('.nft-cards__swiper', {
-  slidesPerView: 'auto',
+  slidesPerView: 1.2,
   freeMode: false,
   spaceBetween: 30,
-  centeredSlides: true,
   watchOverflow: true,
   slidesOffsetBefore: -20,
   grabCursor: true,
@@ -12,35 +11,41 @@ const swiper = new Swiper('.nft-cards__swiper', {
   },
 
   breakpoints: {
+    375: {
+      slidesOffsetBefore: 20,
+      spaceBetween: 10,
+    },
+    576: {
+      slidesPerView: 1.8,
+    },
+
     768: {
-      slidesPerView: 'auto',
-      centeredSlides: false,
+      slidesPerView: 2.2,
       slidesOffsetBefore: 0,
     },
+
+    1024: {
+      slidesPerView:1.8,
+      slidesOffsetBefore: 0,
+    },
+
+    1320: {
+      slidesPerView:2.5,
+      slidesOffsetBefore: 0,
+    },
+
     1440: {
       slidesPerView: 3,
-      centeredSlides: false,
       slidesOffsetBefore: 0,
-  spaceBetween: 30,
-
-    },
-    1170: {
-      centeredSlides: false,
-      slidesOffsetBefore: 0,
-  spaceBetween: 10,
-
+      spaceBetween: 30,
     },
   },
 })
 
 const collectionSwiper = new Swiper('.collections__swiper', {
-  slidesPerView: 'auto',
+  slidesPerView: 3.2,
   freeMode: false,
-  // loop: true,
   grabCursor: true,
-
-  centeredSlides: true,
-
   spaceBetween: 30,
   scrollbar: {
       el: '.swiper-scrollbar',
@@ -50,15 +55,17 @@ const collectionSwiper = new Swiper('.collections__swiper', {
   breakpoints: {
     375: {
       slidesPerView: 1.2,
-    },
-    400: {
-      slidesPerView: 1.2,
-      centeredSlides: true,
-      slidesOffsetBefore: 0,
+      slidesOffsetBefore: 20,
+  spaceBetween: 10,
     },
     768: {
-      slidesPerView: 3.2,
-
-    }
+      slidesPerView: 2.2
+    },
+    1024: {
+      slidesPerView: 1.8
+    },
+    1440: {
+      slidesPerView: 3
+    },
   },
 })

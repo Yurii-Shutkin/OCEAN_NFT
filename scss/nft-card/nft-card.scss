@@ -2,7 +2,9 @@
 @use '../vars' as *;
 
 .top-nft {
-    margin-bottom: 19rem;
+    max-width: map.get($width, lap-top);
+
+    margin: 0 auto 19rem;
     overflow-x: hidden;
 
     @media(max-width: map.get($width, tablet)) {
@@ -31,7 +33,7 @@
             margin-bottom: 4.4rem;
 
             @media(max-width:map.get($width, mobile)) {
-                margin-bottom: 4rem;
+                margin-bottom: 3.3rem;
             }
         }
     }
@@ -65,7 +67,7 @@
 
 .nft-cards {
     @media(max-width: map.get($width, mobile)) {
-        margin-bottom: 6.6rem;
+        margin-bottom: 7rem;
     }
 }
 
@@ -87,36 +89,23 @@
         justify-content: space-between;
         border: .3rem solid;
         border-image: map.get($colors, grey-gradient) 1;
-        padding: 4rem 2rem 2rem 3rem;
-        // max-width: fit-content;
+        padding: 3.5rem 2rem 1.6rem 3rem;
 
-        @media(max-width: map.get($width, lap-top)) {
-            padding: 3.6rem 1.6rem 1.6rem 3rem;
-        }
 
         @media(max-width: map.get($width, tablet-portrait)) {
             // width: 54rem;
             padding: 5.5rem 2.5rem 2.7rem 3.5rem;
             justify-content: flex-start;
         }
-    }
 
-    &__leftside {
-        @media(max-width: map.get($width, tablet-portrait)) {
-            // margin-right: 4rem;
-        }
     }
 
     &__title {
-        // font-size: 2rem;
+        font-size: 2rem;
         letter-spacing: .02rem;
         margin-bottom: .9rem;
         white-space: nowrap;
         font-size: 2rem;
-
-        @media(max-width: map.get($width, lap-top)) {
-            font-size: 2rem;
-        }
 
         @media(max-width: map.get($width, tablet-portrait)) {
             font-size: 2.4rem;
@@ -153,9 +142,6 @@
             margin-right: .5rem;
             font-size: 1.8rem;
 
-            @media(max-width: map.get($width, lap-top)) {
-                font-size: 1.8rem;
-            }
 
             @media(max-width: map.get($width, tablet-portrait)) {
                 font-size: 2rem;

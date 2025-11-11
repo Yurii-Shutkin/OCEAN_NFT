@@ -2,45 +2,34 @@
 @use '../vars' as *;
 
 .explore {
-    @media (max-width: map.get($width, pc)) {
-        margin-bottom: 0rem;
-    }
-
-    @media (max-width: map.get($width, lap-top)) {
-        margin-bottom: 1.4rem;
-    }
+    margin-bottom: 1.4rem;
 
     @media (max-width: map.get($width, mobile)) {
-        margin-bottom: 14.4rem;
+        margin-bottom: 14rem;
     }
 
     &__wrap {
         display: flex;
+        justify-content: flex-start;
 
-        @media (max-width: map.get($width, pc)) {
-            justify-content: center;
-        }
-
-        @media (max-width: map.get($width, lap-top)) {
-            justify-content: flex-start;
-        }
-
-        @media (max-width: 1000px) {
-            justify-content: center;
-        }
-
-        @media (max-width: 576px) {
+        @media (max-width: 1024px) {
             flex-wrap: wrap;
         }
     }
 
     &__leftside {
-        @media (max-width: 576px) {
-            margin-bottom: 10rem;
+        @media (max-width: 1024px) {
+            margin-bottom: 15rem;
         }
 
         @media (max-width: map.get($width, mobile)) {
             margin-bottom: 6.8rem;
+        }
+    }
+
+    &__rightside {
+        @media (max-width: 1024px) {
+            margin: 0 auto;
         }
     }
 
@@ -72,7 +61,6 @@
 
             @media (max-width: map.get($width, mobile)) {
                 gap: 0;
-                margin-left: 5rem;
             }
         }
     }
@@ -108,21 +96,11 @@
 
     &__picture {
         position: relative;
+        width: 39.9rem;
+        margin-left: 11.2rem;
+        bottom: 11.4rem;
 
-        @media(max-width: map.get($width, pc)) {
-            width: 40rem;
-            margin-left: 14rem;
-            bottom: 16.4rem;
-        }
-
-        @media(max-width: map.get($width, lap-top)) {
-            width: 39.9rem;
-            margin-left: 11.2rem;
-            bottom: 11.4rem;
-
-        }
-
-        @media(max-width: 1000px) {
+        @media (max-width: 1024px) {
             width: 35rem;
         }
 
@@ -134,18 +112,16 @@
 
         @media (max-width: map.get($width, mobile)) {
             width: 33rem;
-            margin-left: 0;
+            margin-left: 12rem;
         }
 
     }
 
     &__allbtn {
-        // position: relative;
         display: block;
         color: map.get($colors, primary);
         font-size: 1.8rem;
         margin: 0 0 0 auto;
-        // bottom: 14rem;
 
         @media (max-width: map.get($width, mobile)) {
             font-size: 1.4rem;

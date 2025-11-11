@@ -41,37 +41,9 @@
         }
 
         @media(max-width: map.get($width, mobile)) {
-            margin-bottom: 5.4rem;
+            margin-bottom: 6rem;
         }
     }
-
-    // &__wrap {
-    //     display: flex;
-    //     gap: 3rem;
-
-    //     @media (max-width: map.get($width, pc)) {
-    //         justify-content: space-around;
-    //         gap: 3rem;
-    //     }
-
-    //     @media (max-width: map.get($width, lap-top)) {
-    //         justify-content: space-between;
-    //         gap: 3rem;
-    //     }
-
-    //     @media (max-width: map.get($width, tablet)) {
-    //         flex-wrap: wrap;
-    //         justify-content: space-around;
-    //         gap: 3rem;
-    //     }
-
-    //     @media (max-width: map.get($width, tablet-portrait)) {
-    //         flex-wrap: nowrap;
-    //         // overflow: hidden;
-    //         margin-left: -1.2rem;
-    //         margin-bottom: 7rem;
-    //     }
-    // }
 
     &__item {
         border: 2px solid;
@@ -126,7 +98,7 @@
             color: map.get($colors, primary);
 
             @media (max-width: map.get($width, tablet-portrait)) {
-                top: -12.8rem;
+                top: -13.3rem;
             }
         }
 

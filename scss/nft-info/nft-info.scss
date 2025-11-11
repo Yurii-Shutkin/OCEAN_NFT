@@ -2,7 +2,6 @@
 @use '../vars' as *;
 
 .nft-info {
-    position: relative;
     background-image: url('../img/backgrounds/feature_bg.jpg');
     background-position: center;
     width: 100%;
@@ -14,29 +13,32 @@
         margin-bottom: 34rem;
     }
 
+    &__wrap {
+        position: relative;
+    }
+
     &__card {
         position: absolute;
-        max-width: fit-content;
-        max-width: 36%;
+        max-width: 52rem;
         color: map.get($colors, primary);
         backdrop-filter: blur(5rem);
         border: .3rem solid;
         border-image: map.get($colors, grey-gradient) 1;
-        padding: 5.2rem 6rem 4rem 6rem;
-        bottom: -11.5rem;
-        right: 12.4rem;
+        padding: 5.2rem 6rem 5rem 6rem;
+        right: 27px;
+        top: 190px;
 
         @media(max-width: map.get($width, tablet)) {
-            max-width: 50%;
+            max-width: 50rem;
             padding: 4rem 5rem;
             right: 25%;
         }
 
         @media(max-width: map.get($width, mobile)) {
             max-width: 60rem;
-            padding: 5.8rem 6rem 5rem 7rem;
-            bottom: -17.3rem;
-            right: 3.8rem;
+            padding: 5.8rem 5rem 5.2rem 5rem;
+            top: 21.9rem;
+            right: 0;
 
         }
 

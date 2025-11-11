@@ -4,11 +4,17 @@
 .footer {
     font-family: 'Inter';
     color: map.get($colors, primary);
-    width: 90%;
-    margin: 0 auto 4rem;
+    max-width: 1280px;
+    margin: 0px 0rem 4rem 7.5rem;
 
     @media(max-width: map.get($width, mobile)) {
         margin-bottom: 18rem;
+        margin-left: 3.5rem;
+    }
+
+    &__wrap {
+        max-width: 1440px;
+        margin: 0 auto;
     }
 
     &__main {
@@ -21,6 +27,10 @@
 
         @media(max-width:1340px) {
             justify-content: center;
+        }
+
+        @media(max-width:1024px) {
+            max-width: 91%;
         }
 
         @media(max-width: map.get($width, tablet)) {
@@ -82,7 +92,7 @@
 
     &__info {
         max-width: 20%;
-        margin-right: 7.8rem;
+        margin-right: 7.9rem;
 
         @media(max-width: map.get($width, tablet-portrait)) {
             max-width: 100%;
@@ -169,6 +179,10 @@
         &--wrap {
             @media(max-width: map.get($width, tablet-portrait)) {
                 border-bottom: .2rem solid rgba(255, 255, 255, .2)
+            }
+
+            @media(max-width: map.get($width, mobile)) {
+                max-width: 336px;
             }
         }
 
@@ -285,6 +299,10 @@
             flex-direction: column-reverse;
             font-size: 2.6rem;
             margin-right: 0;
+        }
+
+        @media (max-width: map.get($width, mobile)) {
+            margin-right: 7rem;
         }
 
         span {

@@ -2,30 +2,42 @@
 @use '../vars' as *;
 
 .nft-cards__swiper {
+    max-width: 1240px;
 
-    @media(max-width: map.get($width, pc)) {
-        max-width: 1620px;
+    @media(max-width: 1320px) {
+        max-width: 1024px;
     }
 
-    @media(max-width: map.get($width, lap-top)) {
-        max-width: 1226px;
+    @media(max-width: 1024px) {
+        max-width: 768px;
     }
 
-    .swiper-slide {
-        width: 304px;
+    @media(max-width: 768px) {
+        max-width: 550px;
+    }
+
+    .swiper-wrapper {
+        width: 33.3%;
     }
 }
 
 .collections__swiper {
+    max-width: 1226px;
 
+    @media(max-width: 1320px) {
+        max-width: 1024px;
+    }
 
+    @media(max-width: 1024px) {
+        max-width: 768px;
+    }
 
-    @media(max-width: map.get($width, lap-top)) {
-        max-width: 1226px;
+    @media(max-width: 768px) {
+        max-width: 550px;
     }
 
     @media(max-width: map.get($width, mobile)) {
-        margin-bottom: 7.6rem;
+        margin-bottom: 7.3rem;
     }
 
 }

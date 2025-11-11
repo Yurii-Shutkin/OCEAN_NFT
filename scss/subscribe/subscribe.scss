@@ -6,7 +6,12 @@
     display: flex;
     margin-bottom: 14.4rem;
 
+    @media(max-width: 1024px) {
+        display: block;
+    }
+
     @media(max-width: map.get($width, tablet)) {
+        display: flex;
         flex-direction: column-reverse;
     }
 
@@ -35,6 +40,11 @@
     &__info {
         width: 67%;
         margin-left: auto;
+
+        @media(max-width: 1024px) {
+            width: 100%;
+            margin-left: 0;
+        }
 
         @media(max-width: map.get($width, tablet)) {
             margin-left: 0;

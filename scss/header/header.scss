@@ -5,6 +5,8 @@
 @use './banner.scss' as *;
 
 .header {
+    max-width: map.get($width, lap-top);
+    margin: 0 auto;
 
     @media (max-width: map.get($width, tablet)) {
         margin-bottom: 10.5rem;
@@ -25,7 +27,7 @@
 
         @media (max-width: map.get($width, mobile)) {
             margin-bottom: 6rem;
-            padding: 4.4rem 5rem 5rem 3rem;
+            padding: 3.6rem 5.6rem 5.5rem 3rem;
         }
 
         &__logo {

@@ -73,13 +73,20 @@
         gap: 3rem;
         margin-bottom: 5rem;
 
+        @media(max-width: 1024px) {
+            grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+            overflow-x: scroll;
+            grid-auto-flow: column;
+            gap: 2rem;
+        }
+
         @media(max-width: map.get($width, tablet)) {
             grid-template: 1fr 1fr / 1fr 1fr;
         }
 
         @media(max-width: map.get($width, tablet-portrait)) {
             grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
-            overflow-x: hidden;
+            overflow-x: scroll;
             grid-auto-flow: column;
             gap: 4.7rem;
             margin-bottom: 5.8rem;
@@ -101,8 +108,8 @@
         z-index: 1;
         padding: 2.4rem;
 
-        @media (max-width: map.get($width, pc)) {
-            width: 100%;
+        @media (max-width: 1024px) {
+            width: 34rem;
         }
 
         @media (max-width: map.get($width, tablet-portrait)) {

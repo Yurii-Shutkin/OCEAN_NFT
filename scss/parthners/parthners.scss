@@ -3,15 +3,7 @@
 
 .parthners {
     width: 100%;
-
-    @media(max-width: map.get($width, pc)) {
-        margin-bottom: 15rem;
-    }
-
-    @media(max-width: map.get($width, lap-top)) {
-        margin-bottom: 20rem;
-
-    }
+    margin-bottom: 20rem;
 
     @media(max-width: map.get($width, tablet)) {
         margin-bottom: 12rem;
