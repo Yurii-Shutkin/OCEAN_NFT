@@ -1393,6 +1393,11 @@ svg {
 .explore__categories {
   margin-bottom: 4rem;
 }
+@media (max-width: 375px) {
+  .explore__categories {
+    margin-left: 5rem;
+  }
+}
 .explore__categories ul {
   display: grid;
   grid-template-columns: repeat(2, 33.8rem);
@@ -1455,7 +1460,7 @@ svg {
 @media (max-width: 375px) {
   .explore__picture {
     width: 33rem;
-    margin-left: 12rem;
+    margin-left: 1rem;
   }
 }
 .explore__allbtn {

@@ -60,6 +60,10 @@
     &__categories {
         margin-bottom: 4rem;
 
+        @media (max-width: map.get($width, mobile)) {
+            margin-left: 5rem;
+        }
+
         ul {
             display: grid;
             grid-template-columns: repeat(2, 33.8rem);
@@ -123,7 +127,7 @@
 
         @media (max-width: map.get($width, mobile)) {
             width: 33rem;
-            margin-left: 12rem;
+            margin-left: 1rem;
         }
 
     }
