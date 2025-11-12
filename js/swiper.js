@@ -70,14 +70,15 @@ const nftCardsSwiper = new Swiper('.nft-cards__swiper', {
 
       slidesOffsetBefore: 20,
     },
-    375: {
+    376: {
       slidesPerView: 1.2,
-
       slidesOffsetBefore: 20,
       spaceBetween: 10,
     },
-    576: {
+    465: {
       slidesPerView: 1.7,
+      spaceBetween: 10,
+      slidesOffsetBefore: 10,
     },
     577: {
       slidesPerView: 2.2,
@@ -87,7 +88,11 @@ const nftCardsSwiper = new Swiper('.nft-cards__swiper', {
       slidesPerView: 1.8,
       slidesOffsetBefore: 20,
     },
-    1320: {
+    825: {
+      slidesPerView:2.1,
+      spaceBetween: 10,
+    },
+    1040: {
       slidesPerView:2.5,
       slidesOffsetBefore: 0,
     },
@@ -104,7 +109,7 @@ const collectionSwiper = new Swiper('.collections__swiper', {
   slidesPerView: 1.2,
   freeMode: false,
   grabCursor: true,
-  spaceBetween: 30,
+  spaceBetween: 10,
   scrollbar: {
       el: '.swiper-scrollbar',
       draggable: true,
@@ -116,19 +121,22 @@ const collectionSwiper = new Swiper('.collections__swiper', {
       slidesOffsetBefore: 20,
     },
     375: {
-      slidesPerView: 1.2,
-      slidesOffsetBefore: 20,
-      spaceBetween: 10,
+      slidesOffsetBefore: 10,
+    },
+    577: {
+      slidesPerView: 2.2,
+    },
+    460: {
+      slidesPerView: 1.4,
+      slidesOffsetBefore: 10,
     },
     768: {
-      slidesPerView: 2.2
+      slidesPerView: 2.2,
+      slidesOffsetBefore: 10,
     },
-    1024: {
-      slidesPerView: 1.8
-    },
-    1440: {
+    1321: {
       slidesPerView: 3
-    },
+    }
   },
 })
 
