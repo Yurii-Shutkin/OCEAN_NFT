@@ -2422,6 +2422,11 @@ svg {
     display: block;
   }
 }
+@media (max-width: 576px) and (max-width: 375px) {
+  .footer__categories--title img {
+    margin-right: 3rem;
+  }
+}
 .footer__categories--dropdown {
   display: flex;
   flex-direction: column;
@@ -2533,7 +2538,7 @@ body {
     font-size: 35%;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 374px) {
   html,
   body {
     font-size: 28%;

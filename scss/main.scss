@@ -19,15 +19,11 @@ body {
     font-size: 62.5%;
     scroll-behavior: smooth;
 
-    @media (max-width: 1000px) {
-        // font-size: 40%;
-    }
-
     @media(max-width: map.get($width, tablet)) {
         font-size: 35%;
     }
 
-    @media(max-width: 320px) {
+    @media(max-width: 374px) {
         font-size: 28%;
     }
 }

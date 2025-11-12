@@ -240,6 +240,10 @@
 
                 img {
                     display: block;
+
+                    @media(max-width: map.get($width, mobile)) {
+                        margin-right: 3rem;
+                    }
                 }
             }
         }
