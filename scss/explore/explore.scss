@@ -12,12 +12,23 @@
         display: flex;
         justify-content: flex-start;
 
+        @media (max-width: 1270px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         @media (max-width: 1024px) {
             flex-wrap: wrap;
         }
     }
 
     &__leftside {
+        @media (max-width: 1270px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 15rem;
+        }
+
         @media (max-width: 1024px) {
             margin-bottom: 15rem;
         }

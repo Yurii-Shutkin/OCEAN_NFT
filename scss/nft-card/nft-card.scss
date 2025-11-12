@@ -93,9 +93,8 @@
 
 
         @media(max-width: map.get($width, tablet-portrait)) {
-            // width: 54rem;
             padding: 5.5rem 2.5rem 2.7rem 3.5rem;
-            justify-content: flex-start;
+            justify-content: space-between;
         }
 
     }

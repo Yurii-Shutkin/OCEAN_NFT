@@ -1,34 +1,46 @@
-const swiper = new Swiper('.nft-cards__swiper', {
+const swiper = new Swiper('.swiper', {
+  // observer: true,
+  // observeParents: true,
+  // observeSlideChildren: true,
+})
+
+let nftCardsSwiper;
+const initNftCardsSwiper = () => {
+  if (nftCardsSwiper) nftCardsSwiper.destroy(true, true);
+
+  nftCardsSwiper = new Swiper('.nft-cards__swiper', {
   slidesPerView: 1.2,
   freeMode: false,
   spaceBetween: 30,
   watchOverflow: true,
-  slidesOffsetBefore: -20,
   grabCursor: true,
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
   scrollbar: {
       el: '.swiper-scrollbar',
       draggable: true,
   },
 
   breakpoints: {
+    320: {
+      slidesOffsetBefore: 20,
+    },
     375: {
       slidesOffsetBefore: 20,
       spaceBetween: 10,
     },
     576: {
-      slidesPerView: 1.8,
+      slidesPerView: 1.7,
     },
-
-    768: {
+    577: {
       slidesPerView: 2.2,
-      slidesOffsetBefore: 0,
     },
 
-    1024: {
-      slidesPerView:1.8,
-      slidesOffsetBefore: 0,
+    769: {
+      slidesPerView: 1.8,
+      slidesOffsetBefore: 20,
     },
-
     1320: {
       slidesPerView:2.5,
       slidesOffsetBefore: 0,
@@ -41,22 +53,30 @@ const swiper = new Swiper('.nft-cards__swiper', {
     },
   },
 })
+}
 
 const collectionSwiper = new Swiper('.collections__swiper', {
-  slidesPerView: 3.2,
+  slidesPerView: 1.2,
   freeMode: false,
   grabCursor: true,
   spaceBetween: 30,
+  // observer: true,
+  // observeParents: true,
+  // observeSlideChildren: true,
   scrollbar: {
       el: '.swiper-scrollbar',
       draggable: true,
   },
 
   breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+      slidesOffsetBefore: 20,
+    },
     375: {
       slidesPerView: 1.2,
       slidesOffsetBefore: 20,
-  spaceBetween: 10,
+      spaceBetween: 10,
     },
     768: {
       slidesPerView: 2.2
@@ -69,3 +89,11 @@ const collectionSwiper = new Swiper('.collections__swiper', {
     },
   },
 })
+
+initNftCardsSwiper();
+
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(initNftCardsSwiper, 300); 
+});

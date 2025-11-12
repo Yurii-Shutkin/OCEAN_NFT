@@ -69,6 +69,10 @@
             margin-bottom: 8rem;
         }
 
+        @media (max-width: 1239px) {
+            margin-bottom: 0;
+        }
+
         @media(max-width: 576px) {
             margin-bottom: 0;
         }
@@ -78,8 +82,13 @@
         max-width: 60%;
         margin-right: 6rem;
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1239px) {
             margin-right: 0;
+        }
+
+        @media (max-width: 1089px) {
+            max-width: 100%;
+            margin-bottom: 5rem;
         }
 
         @media (max-width: 576px) {
@@ -99,6 +108,10 @@
     }
 
     .rightside-wrap {
+
+        @media (max-width: 1089px) {
+            margin: 0 auto;
+        }
 
         @media (max-width: 576px) {
             margin: 0 auto;
@@ -123,6 +136,9 @@
             background-clip: text;
         }
 
+        @media(max-width: 1327px) {
+            font-size: 6rem;
+        }
 
         @media (max-width: 1000px) {
             font-size: 6rem;

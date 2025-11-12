@@ -20,7 +20,7 @@ body {
     scroll-behavior: smooth;
 
     @media (max-width: 1000px) {
-        font-size: 40%;
+        // font-size: 40%;
     }
 
     @media(max-width: map.get($width, tablet)) {
@@ -69,7 +69,7 @@ summary::-webkit-details-marker {
 
 .bg {
     position: relative;
-    // overflow: hidden;
+    overflow: hidden;
 }
 
 
@@ -82,6 +82,7 @@ summary::-webkit-details-marker {
     background: url('../img/backgrounds/main_bg.jpg') center/cover no-repeat;
     filter: blur(5rem);
     z-index: -1;
+    transform: scale(1.4);
 }
 
 .container {

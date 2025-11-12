@@ -265,7 +265,7 @@ svg {
 }
 @media (max-width: 1024px) {
   .nft-cards__swiper {
-    max-width: 768px;
+    max-width: 900px;
   }
 }
 @media (max-width: 768px) {
@@ -463,6 +463,11 @@ svg {
     margin-bottom: 8rem;
   }
 }
+@media (max-width: 1239px) {
+  .banner__wrap {
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 576px) {
   .banner__wrap {
     margin-bottom: 0;
@@ -472,9 +477,15 @@ svg {
   max-width: 60%;
   margin-right: 6rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1239px) {
   .banner .leftside-wrap {
     margin-right: 0;
+  }
+}
+@media (max-width: 1089px) {
+  .banner .leftside-wrap {
+    max-width: 100%;
+    margin-bottom: 5rem;
   }
 }
 @media (max-width: 576px) {
@@ -492,6 +503,11 @@ svg {
     order: 1;
     margin-bottom: 0;
     text-align: left;
+  }
+}
+@media (max-width: 1089px) {
+  .banner .rightside-wrap {
+    margin: 0 auto;
   }
 }
 @media (max-width: 576px) {
@@ -516,6 +532,11 @@ svg {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+@media (max-width: 1327px) {
+  .banner__title {
+    font-size: 6rem;
+  }
 }
 @media (max-width: 1000px) {
   .banner__title {
@@ -944,6 +965,11 @@ svg {
   margin-right: 23.4rem;
   letter-spacing: 0.07rem;
 }
+@media (max-width: 1270px) {
+  .header .nav__bar ul {
+    margin-right: 0;
+  }
+}
 .header .nav__bar-item {
   opacity: 0.6;
   transition: opasity 0.3s ease;
@@ -971,6 +997,12 @@ svg {
 .parthners {
   width: 100%;
   margin-bottom: 20rem;
+}
+@media (max-width: 1178px) {
+  .parthners {
+    margin-bottom: 15rem;
+    margin-top: 8rem;
+  }
 }
 @media (max-width: 768px) {
   .parthners {
@@ -1091,7 +1123,7 @@ svg {
 @media (max-width: 576px) {
   .nft-card__info {
     padding: 5.5rem 2.5rem 2.7rem 3.5rem;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 }
 .nft-card__title {
@@ -1312,9 +1344,22 @@ svg {
   display: flex;
   justify-content: flex-start;
 }
+@media (max-width: 1270px) {
+  .explore__wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 @media (max-width: 1024px) {
   .explore__wrap {
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 1270px) {
+  .explore__leftside {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15rem;
   }
 }
 @media (max-width: 1024px) {
@@ -2482,12 +2527,6 @@ body {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-@media (max-width: 1000px) {
-  html,
-  body {
-    font-size: 40%;
-  }
-}
 @media (max-width: 768px) {
   html,
   body {
@@ -2536,6 +2575,7 @@ summary::-webkit-details-marker {
 
 .bg {
   position: relative;
+  overflow: hidden;
 }
 
 .blur-bg {
@@ -2547,6 +2587,7 @@ summary::-webkit-details-marker {
   background: url("../img/backgrounds/main_bg.jpg") center/cover no-repeat;
   filter: blur(5rem);
   z-index: -1;
+  transform: scale(1.4);
 }
 
 .container {

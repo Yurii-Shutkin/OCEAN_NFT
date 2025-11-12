@@ -69,6 +69,10 @@
                 font-size: 1.7rem;
                 margin-right: 23.4rem;
                 letter-spacing: .07rem;
+
+                @media (max-width: 1270px) {
+                    margin-right: 0;
+                }
             }
 
             &-item {

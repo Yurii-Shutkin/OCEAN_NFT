@@ -5,6 +5,11 @@
     width: 100%;
     margin-bottom: 20rem;
 
+    @media (max-width: 1178px) {
+        margin-bottom: 15rem;
+        margin-top: 8rem;
+    }
+
     @media(max-width: map.get($width, tablet)) {
         margin-bottom: 12rem;
         margin-top: 8rem;
