@@ -6,6 +6,10 @@
     display: flex;
     margin-bottom: 14.4rem;
 
+    @media(max-width: 1200px) {
+        display: block;
+    }
+
     @media(max-width: 1024px) {
         display: block;
     }
@@ -16,7 +20,7 @@
     }
 
     @media(max-width: map.get($width, mobile)) {
-        margin-bottom: 19.2rem;
+        margin-bottom: 15rem;
     }
 
 
@@ -26,6 +30,11 @@
         height: 26rem;
         border-radius: .5rem;
         margin-right: 7rem;
+
+        @media(max-width: 1200px) {
+            width: 100%;
+            margin-bottom: 4rem;
+        }
 
         @media(max-width: map.get($width, tablet)) {
             width: 100%;
@@ -41,6 +50,11 @@
         width: 67%;
         margin-left: auto;
 
+        @media(max-width: 1200px) {
+            width: 100%;
+            text-align: center;
+        }
+
         @media(max-width: 1024px) {
             width: 100%;
             margin-left: 0;
@@ -54,6 +68,7 @@
         @media(max-width: map.get($width, mobile)) {
             width: 100%;
             margin-bottom: 19.5rem;
+            text-align: left;
         }
 
     }

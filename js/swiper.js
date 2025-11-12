@@ -55,9 +55,9 @@ const nftCardsSwiper = new Swiper('.nft-cards__swiper', {
   spaceBetween: 30,
   watchOverflow: true,
   grabCursor: true,
-  observer: true,
-  observeParents: true,
-  observeSlideChildren: true,
+  // observer: true,
+  // observeParents: true,
+  // observeSlideChildren: true,
   updateOnWindowResize: true,
   scrollbar: {
       el: '.swiper-scrollbar',

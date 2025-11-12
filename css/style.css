@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .orbitron {
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
@@ -2041,6 +2042,11 @@ svg {
   display: flex;
   margin-bottom: 14.4rem;
 }
+@media (max-width: 1200px) {
+  .subscribe {
+    display: block;
+  }
+}
 @media (max-width: 1024px) {
   .subscribe {
     display: block;
@@ -2054,7 +2060,7 @@ svg {
 }
 @media (max-width: 375px) {
   .subscribe {
-    margin-bottom: 19.2rem;
+    margin-bottom: 15rem;
   }
 }
 .subscribe__banner {
@@ -2063,6 +2069,12 @@ svg {
   height: 26rem;
   border-radius: 0.5rem;
   margin-right: 7rem;
+}
+@media (max-width: 1200px) {
+  .subscribe__banner {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
 }
 @media (max-width: 768px) {
   .subscribe__banner {
@@ -2078,6 +2090,12 @@ svg {
 .subscribe__info {
   width: 67%;
   margin-left: auto;
+}
+@media (max-width: 1200px) {
+  .subscribe__info {
+    width: 100%;
+    text-align: center;
+  }
 }
 @media (max-width: 1024px) {
   .subscribe__info {
@@ -2095,6 +2113,7 @@ svg {
   .subscribe__info {
     width: 100%;
     margin-bottom: 19.5rem;
+    text-align: left;
   }
 }
 .subscribe__title {
@@ -2202,6 +2221,12 @@ svg {
   margin: 0px 0rem 0 7.5rem;
   padding-bottom: 4rem;
 }
+@media (max-width: 1320px) {
+  .footer {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
 @media (max-width: 375px) {
   .footer {
     padding-bottom: 14rem;
@@ -2212,22 +2237,23 @@ svg {
   max-width: 1440px;
   margin: 0 auto;
 }
+@media (max-width: 1320px) {
+  .footer__wrap {
+    max-width: 100%;
+  }
+}
 .footer__main {
   display: flex;
   align-items: center;
-  padding: 8.2rem 0 7.8rem 0;
+  padding: 8.3rem 0 7.5rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 2.8rem;
 }
-@media (max-width: 1340px) {
+@media (max-width: 1320px) {
   .footer__main {
     justify-content: center;
-  }
-}
-@media (max-width: 1024px) {
-  .footer__main {
-    max-width: 91%;
+    flex-direction: column;
   }
 }
 @media (max-width: 768px) {
@@ -2245,6 +2271,7 @@ svg {
 }
 @media (max-width: 375px) {
   .footer__main {
+    padding: 4rem 0 2.8rem 0;
     margin-bottom: 2.3rem;
   }
 }
@@ -2274,6 +2301,11 @@ svg {
   display: flex;
   align-items: center;
 }
+@media (max-width: 1320px) {
+  .footer__logo a {
+    display: block;
+  }
+}
 .footer__desc {
   display: block;
   font-size: 1.4rem;
@@ -2291,12 +2323,25 @@ svg {
   max-width: 20%;
   margin-right: 7.9rem;
 }
+@media (max-width: 1320px) {
+  .footer__info {
+    max-width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+}
 @media (max-width: 576px) {
   .footer__info {
     max-width: 100%;
     margin-right: 0;
     margin-top: 5rem;
     margin-left: 1rem;
+  }
+}
+@media (max-width: 375px) {
+  .footer__info {
+    text-align: left;
+    margin-top: 0;
   }
 }
 @media (max-width: 576px) {
@@ -2309,16 +2354,15 @@ svg {
   align-items: center;
   gap: 1.4rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1320px) {
   .footer__socials ul {
-    gap: 0;
-    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 4rem;
   }
 }
 @media (max-width: 768px) {
   .footer__socials ul {
     gap: 2rem;
-    justify-content: flex-start;
   }
 }
 .footer__socials--item {
@@ -2420,7 +2464,7 @@ svg {
     font-size: 3.5rem;
     margin-left: 1.2rem;
     letter-spacing: 0.17rem;
-    padding-bottom: 3.3rem;
+    padding-bottom: 3.4rem;
     margin-bottom: 0;
   }
   .footer__categories--title img {
@@ -2429,7 +2473,7 @@ svg {
 }
 @media (max-width: 576px) and (max-width: 375px) {
   .footer__categories--title img {
-    margin-right: 3rem;
+    margin-right: 5rem;
   }
 }
 .footer__categories--dropdown {
@@ -2477,6 +2521,11 @@ svg {
   font-size: 1.4rem;
   font-weight: 400;
   margin-right: 8rem;
+}
+@media (max-width: 1339px) {
+  .footer__copyright {
+    justify-content: space-around;
+  }
 }
 @media (max-width: 576px) {
   .footer__copyright {
@@ -2536,6 +2585,9 @@ html,
 body {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 @media (max-width: 768px) {
   html,
@@ -2548,6 +2600,14 @@ body {
   body {
     font-size: 28%;
   }
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  /* убираем горизонтальный скролл */
+  background: url("../img/backgrounds/main_bg.jpg") center/cover fixed no-repeat;
+  /* базовый фон */
 }
 
 img {
@@ -2583,21 +2643,17 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-.bg {
-  position: relative;
-  overflow: hidden;
+.bg-blur {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(5rem);
+  z-index: 0;
+  pointer-events: none;
 }
 
-.blur-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  bottom: 0;
-  background: url("../img/backgrounds/main_bg.jpg") center/cover no-repeat;
-  filter: blur(5rem);
-  z-index: -1;
-  transform: scale(1.4);
+.main-content {
+  position: relative;
+  z-index: 1;
 }
 
 .container {

@@ -18,6 +18,9 @@ html,
 body {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 
     @media(max-width: map.get($width, tablet)) {
         font-size: 35%;
@@ -26,6 +29,14 @@ body {
     @media(max-width: 374px) {
         font-size: 28%;
     }
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    /* убираем горизонтальный скролл */
+    background: url('../img/backgrounds/main_bg.jpg') center/cover fixed no-repeat;
+    /* базовый фон */
 }
 
 img {
@@ -63,22 +74,18 @@ summary::-webkit-details-marker {
     display: none;
 }
 
-.bg {
-    position: relative;
-    overflow: hidden;
+.bg-blur {
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(5rem);
+    z-index: 0;
+    pointer-events: none;
+
 }
 
-
-.blur-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    bottom: 0;
-    background: url('../img/backgrounds/main_bg.jpg') center/cover no-repeat;
-    filter: blur(5rem);
-    z-index: -1;
-    transform: scale(1.4);
+.main-content {
+    position: relative;
+    z-index: 1;
 }
 
 .container {
